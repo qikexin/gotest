@@ -21,6 +21,9 @@ import (
 //		log.Fatal(err)
 //	}
 //}
+
+//DEPRECATED: HHHHHJ
+
 func test()  {
 	gen := func(ctx context.Context) <-chan int {
 		dst := make(chan int)
