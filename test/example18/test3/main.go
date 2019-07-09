@@ -42,7 +42,6 @@ func main()  {
 		lastname := c.Query("lastname")
 		c.String(http.StatusOK,"helo %s %s",firstname,lastname)
 		c.JSON(200,gin.H{
-
 		})
 	})
 	authorized := router.Group("/")
@@ -101,7 +100,7 @@ func main()  {
 	_,file,_,_ := runtime.Caller(0)
 	dir := filepath.Dir(file)
 	fmt.Println(filepath.Join(dir,"/templates/"))
-	router := gin.Default()
+	router = gin.Default()
 	router.LoadHTMLGlob(filepath.Join(dir,"/templates/**/*"))
 	//router.LoadHTMLFiles("templates/template1.html","templates/template2.html")
 	router.GET("/index", func(c *gin.Context) {
